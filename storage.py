@@ -5,9 +5,19 @@ import os
 class storage:
 
 # Define a method named 'store_books' to store book details in a CSV file
-    def store_books(self,title,author,isbn):
+    
+    def store_books(self,title,author,isbn): 
        
-       file_name = r'C:\Users\nehaa\OneDrive\Desktop\codes\Logging.csv'     # Define the file path where the CSV file will be stored
+       """
+        Store book details in a CSV file.
+        
+        Args:
+            title (str): The title of the book to be stored.
+            author (str): The author(s) of the book to be stored.
+            isbn : The International Standard Book Number of the book to be stored.
+        """
+       relative_path = os.getcwd()  # It will automatically return the current directory path
+       file_name = os.path.join(relative_path, 'Logging.csv')  # It will join the relative_path with the logging.csv file.
 
 # Check if the file already exists
        
