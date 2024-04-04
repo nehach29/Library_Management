@@ -2,7 +2,7 @@
 The Library Management System is designed to automate and streamline the management of books and users in a library setting. The system is built using object-oriented programming principles and consists of multiple components/modules to handle various functionalities.
 
 # Book.py File
-# Class Definition: ManageBooks
+# Class Define: ManageBooks
 A class to manage the collection of books in a library.
 # Attributes:
 books: A list attribute initialized as an empty list to store dictionaries representing individual books. Each dictionary contains keys title, author, and isbn to store the respective details of a book.
@@ -11,7 +11,7 @@ add_book: A method to add a new book to the collection. It takes three parameter
 list_books: A method to list all the books in the collection. It iterates over the books list and prints each book as a dictionary containing title, author, and isbn keys.
 
 # Check.py File
-# Class Definition: CheckoutManagement
+# Class Define: CheckoutManagement
 A class to manage the checkout process of books to users in a library.
 # Attributes:
 checkouts: A list attribute initialized as an empty list to store dictionaries representing individual checkouts. Each dictionary contains keys user_id and isbn to store the respective details of a checkout.
@@ -26,7 +26,7 @@ Keeping the data modeling logic separate from the application's business logic a
 The data model classes defined in the model.py file can be reused across different parts of the application or even in other projects, providing a consistent and unified representation of the data entities.
 
 # Storage.py File
-# Class Definition: Storage
+# Class Define: Storage
 A class to manage the storage of book details in a CSV file.
 # Methods:
 store_books: A method defined in the Storage class to store book details in a CSV file. It takes three parameters (title, author, isbn) representing the title, author(s), and ISBN of the book to be stored. 
@@ -42,7 +42,7 @@ If the file does not exist, writes the header with field names using thewriter.w
 Writes a new row with the provided book details using thewriter.writerow().
 
 # User.py File
-# Class Definition: UserManagement
+# Class Define: UserManagement
 A class to manage the collection of users in a library.
 # Attributes:
 users: A list attribute initialized as an empty list to store dictionaries representing individual users. Each dictionary contains keys name and user_id to store the respective details of a user.
