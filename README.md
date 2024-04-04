@@ -40,7 +40,7 @@ Opens the CSV file in append mode to add new records.
 Creates a DictWriter object to write dictionaries into the CSV file with specified field names (Title, Author, ISBN).
 If the file does not exist, writes the header with field names using thewriter.writeheader().
 Create separate CSV file which contains the Checkout details of the Books.
-It uses the os.path.join() function to construct an absolute file path by joining the relative_path (current directory path) with the filename 'Logging.csv'
+It uses the os.path.join() function to construct an absolute file path by joining the relative_path (current directory path) with the filename 'checkout.csv'
 Checks if the file already exists using os.path.isfile().
 Opens the CSV file in append mode to add new records.
 Creates a DictWriter object to write dictionaries into the CSV file with specified field names (user_id, ISBN).
