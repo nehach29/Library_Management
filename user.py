@@ -1,6 +1,16 @@
-class user_management:
-    users = []   # Initialize an empty list called 'users' as a class attribute
+class user_Management:
+    users = []  # Initialize an empty list called 'users' as a class attribute
     
- # Define a method named 'add_user' to add a new user to the 'users' list
-    def add_user(self,name, user_id):
-        return self.users.append({"name": name, "user_id": user_id})
+    def add_user(self, name, user_id):
+        """
+        Add a new user to the collection.
+        
+        Args:
+            name (str): The name of the user to be added.
+            user_id (str): The ID of the user to be added.
+            
+        Returns:
+            list: Updated list of users including the newly added user.
+        """
+        self.users.append({"name": name, "user_id": user_id})
+        return self.users  # Return updated list of users including the newly added user.
