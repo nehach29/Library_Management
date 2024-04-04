@@ -5,4 +5,4 @@ class checkout_management:
  # Define a method named 'checkout_book' that takes three parameters
     
     def checkout_book(self,user_id, isbn):
-        return self.checkouts.append({"user_id": user_id, "isbn": isbn})
+        return self.checkouts.append({"user_id": user_id, "isbn": isbn})  # Updated list of checkouts including the newly checked-out book.
