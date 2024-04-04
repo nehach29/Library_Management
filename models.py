@@ -62,6 +62,23 @@ class storage:
                 'Title' : title,
                 'Author' : author,
                 'ISBN': isbn})
+    # Create the CSV file for the Checkout details of the books
+           
+   def store_chekout(self, user_id, isbn):
+       current_directory = os.getcwd()
+       file_name = os.path.join(current_directory, 'Checkout.csv')
+       print(f"Attempting to create file in: {file_name}")
+       file_exists = os.path.isfile(file_name)
+       try:
+           with open('Checkout.csv', 'a', newline='') as f:
+               fieldNames = ['User_ID', 'ISBN']
+               thewriter = csv.DictWriter(f=f, fieldnames=fieldNames)
+               if not file_exists:
+                   thewriter.writeheader()
+               thewriter.writerow({ 'User_ID': user_id, 'ISBN': isbn })
+               print("Data written successfully!")
+       except Exception as e:
+           print(f"An error occurred: {e}")
 class user_management:
     users = []   # Initialize an empty list called 'users' as a class attribute
     
