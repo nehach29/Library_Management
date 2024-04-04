@@ -63,6 +63,7 @@ def main():
                     print("Please enter a valid integer user ID.")
             isbn = input("Enter ISBN of the book to checkout: ")
             checkout_management().checkout_book(user_id, isbn)
+            storage().store_checkout(user_id,isbn)
             print("Book checked out.")
     
 # Check if the script is being run as the main program
