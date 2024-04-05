@@ -30,6 +30,9 @@ The data model classes defined in the model.py file can be reused across differe
 A class to manage the storage of book details in a CSV file.
 # Methods:
 store_books: A method defined in the Storage class to store book details in a CSV file. It takes three parameters (title, author, isbn) representing the title, author(s), and ISBN of the book to be stored. 
+store_chekout: (user_id) The ID of the user performing the checkout.
+isbn (str or int) The ISBN of the book being checked out.
+Attempts to store the user ID and ISBN of a book checkout into a CSV file named 'Checkout.csv'.
 # The method performs the following operations:
 It uses the os.getcwd() function to get the current working directory (CWD) of the Python script.
 The variable relative_path is assigned the current directory path where the Python script is running.
